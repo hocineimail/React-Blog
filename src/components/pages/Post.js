@@ -17,8 +17,15 @@ class Post extends Component {
         <div className="card-body">
         <h5 className="card-title" style={{textAlign: 'center'}}>{title}</h5>
         <img src={url} alt={url} style={{width: '100%'}}/>
+        <br></br>
         <p className="card-text">{body}</p>
-        <h6 className="card-subtitle mb-2 text-muted" ><i onClick={this.onDoubleClick} className="fas fa-heart" style={{color: likes}}></i>{like} like</h6>
+        <h6 className="card-subtitle mb-2 text-muted" >
+        s<i 
+        onClick={this.onClick}  
+        style={{cursor: 'pointer',color: likes}}
+         className="fas fa-heart" ></i>
+         {like} 
+         like</h6>
            
             </div>
             </div>

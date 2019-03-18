@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 import './App.css';
+
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+
 import Header from './components/header/Header'
+import About from './components/pages/About'
+import Blog from './components/pages/Blog'
+import Addpost from './components/pages/Addpost'
+import Contactme from './components/pages/Contactme'
+import nopage from './components/pages/nopage'
 class App extends Component {
   render() {
     return (
@@ -11,7 +20,14 @@ class App extends Component {
         <div className="App ">
       <Header />
       <div className="container">
-       <h1> hello word</h1>
+      <Switch>
+        <Route exact path="/" component={Blog} />
+        <Route exact path="/addpost" component={Addpost} />
+        <Route exact path="/contactme" component={Contactme} />
+        <Route exact path="/about" component={About} />
+        <Route exact  component={nopage} />
+      </Switch>
+       
        </div>
       </div>
       </Router>   

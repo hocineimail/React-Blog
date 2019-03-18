@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 
 
-
- class About extends Component {
+ class nopage extends Component {
   render() {
     return (
       <div>
-     
-        <h1>Page About me</h1>
+        <h1>errrrororororoor</h1>
       </div>
     )
   }
 }
-export default About;
+export default nopage;

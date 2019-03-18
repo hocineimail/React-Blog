@@ -13,7 +13,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
     }
     onChange = (e) => { 
         this.setState({ [e.target.name]: e.target.value})
-        console.log(this.state.editorState)
+        console.log(this.state.title)
  }
  onEditorStateChange: Function = (editorState) => {
     this.setState({
@@ -26,7 +26,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
     return (
       <div >
    
-        <h1>Page ADD POST</h1>
+        <h1 style={{textAlign: 'center'}}>Write your Post </h1>
         <label htmlFor="name">Title</label>
                    <input
                    type="text" 

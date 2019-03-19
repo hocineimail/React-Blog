@@ -1,4 +1,4 @@
-# simple example app TODO using react
+# React-Blog 
 
 EN: An example of how to build a simple Blog (POST DELETE)  using components and props and Redux with React .
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Post from './Post'
-import {GET_POSTS} from '../../actions/types'
+import {getPosts} from '../../actions/postActions'
 class Blog extends Component {
 
   componentDidMount() {
@@ -34,9 +34,7 @@ const maptateToProps = (state) => ( {
     posts: state.post.posts
 })
 
-const mapDispatchToProps = (dispatch) => ({
-    getPosts: () => dispatch({type: GET_POSTS})
-})
 
 
-export default connect(maptateToProps,mapDispatchToProps)(Blog);
+
+export default connect(maptateToProps,{getPosts})(Blog);

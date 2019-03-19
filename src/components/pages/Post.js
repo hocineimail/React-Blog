@@ -1,27 +1,36 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
+import {deletePost} from '../../actions/postActions'
 class Post extends Component {
  state = {
      likely: false
  }
-    onClick = () => {
+
+ onDeleteClick = (id) => {
+    this.props.deletePost(id)
+ }
+    onClicklike = () => {
        this.setState({likely: !this.state.likely})
        console.log(this.state.likely)
     }
   render() {
-      const {title ,url, body ,like } = this.props.post;
+      const {id ,title ,url, body ,like } = this.props.post;
       let likes = (this.state.likely ? "red" : '#f0f0f0')
      return (
       <div>
          <div className="card " style={{marginBottom: '5%'}}> 
         <div className="card-body">
-        <h5 className="card-title" style={{textAlign: 'center'}}>{title}</h5>
+        <h5 className="card-title" style={{textAlign: 'center'}}>
+        {title}
+        <i className="fas fa-times"
+        style={{color: 'red', float: 'right',cursor: 'pointer'}}
+        onClick={this.onDeleteClick.bind(this, id)}></i></h5>
         <img src={url} alt={url} style={{width: '100%'}}/>
         <br></br>
         <p className="card-text">{body}</p>
         <h6 className="card-subtitle mb-2 text-muted" >
         <i 
-        onClick={this.onClick}  
+        onClick={this.onClicklick}  
         style={{cursor: 'pointer',color: likes}}
          className="fas fa-heart" ></i>
          {like} 
@@ -33,4 +42,4 @@ class Post extends Component {
     )
   }
 }
-export default  Post;
+export default connect(null,{deletePost})(Post);

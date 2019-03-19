@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css';
-
+import  { Provider } from 'react-redux'
+import store from './store'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import Header from './components/header/Header'
@@ -15,6 +16,7 @@ import nopage from './components/pages/nopage'
 class App extends Component {
   render() {
     return (
+      <Provider store={store} > 
       <Router>
 
         <div className="App ">
@@ -30,7 +32,8 @@ class App extends Component {
        
        </div>
       </div>
-      </Router>   
+      </Router> 
+      </Provider>  
     );
   }
 }

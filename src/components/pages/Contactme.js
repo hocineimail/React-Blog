@@ -10,6 +10,10 @@ class Contactme extends Component {
         object: '',
         Message: ''
     }
+    onChange = (e) => { 
+        this.setState({ [e.target.name]: e.target.value})
+        console.log(this.state.Firstname)
+ }
   render() {
       const {Firstname , Lastname ,object ,Message} = this.state
     return (
@@ -20,16 +24,16 @@ class Contactme extends Component {
                <div className="col-md-4 card" style={{paddingTop: '3%'}}>
                <div className="card-body ">
                       <ul style={{listStyleType: 'none'}}>
-                       <li><i class="fas fa-mobile-alt"></i> &nbsp;Phone: 5555-55555-55555</li>
-                       <li><i class="fas fa-map-marker-alt"></i> &nbsp;Address: BATNA,ALGERIA</li>
-                       <li><i class="far fa-envelope"></i>&nbsp;Email: hocineismail75@hmail.com</li>
+                       <li><i className="fas fa-mobile-alt"></i> &nbsp;Phone: 5555-55555-55555</li>
+                       <li><i className="fas fa-map-marker-alt"></i> &nbsp;Address: BATNA,ALGERIA</li>
+                       <li><i className="far fa-envelope"></i>&nbsp;Email: hocineismail75@hmail.com</li>
                         </ul> 
 
                 </div>        
                </div>
 
                <div className="col-md-8">
-               <label htmlFor="name">Firstname</label>
+               <label htmlFor="nFirstnameame">Firstname</label>
                    <input
                    type="text" 
                    name="Firstname"
@@ -38,25 +42,25 @@ class Contactme extends Component {
                    className="form-control col form control-lg"
                    placeholder="Enter Firstname ..."
                    />
-                   <label htmlFor="name">Lastname</label>
+                   <label htmlFor="Lastname">Lastname</label>
                    <input
                    type="text" 
-                   name="Firstname"
+                   name="Lastname"
                    value={Lastname}
                    onChange={this.onChange}
                    className="form-control col form control-lg"
                    placeholder="Enter Firstname ..."
                    />
-                  <label htmlFor="name">Object</label>
+                  <label htmlFor="Object">Object</label>
                     <input
                    type="text" 
-                   name="Object"
+                   name="object"
                    value={object}
                    onChange={this.onChange}
                    className="form-control col form control-lg"
                    placeholder="Enter Object ..."
                    />
-                   <label htmlFor="name">Your Message</label>
+                   <label htmlFor="Message">Your Message</label>
                       <textarea
                    type="text" 
                    name="Message"

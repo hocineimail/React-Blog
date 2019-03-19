@@ -20,7 +20,7 @@ class Post extends Component {
         <br></br>
         <p className="card-text">{body}</p>
         <h6 className="card-subtitle mb-2 text-muted" >
-        s<i 
+        <i 
         onClick={this.onClick}  
         style={{cursor: 'pointer',color: likes}}
          className="fas fa-heart" ></i>

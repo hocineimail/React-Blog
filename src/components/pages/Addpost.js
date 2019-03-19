@@ -27,7 +27,10 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
       <div >
    
         <h1 style={{textAlign: 'center'}}>Write your Post </h1>
-        <label htmlFor="name">Title</label>
+       
+                   <div  className="card">
+                   <div className="card-body"> 
+                   <label htmlFor="name">Title</label>
                    <input
                    type="text" 
                    name="title"
@@ -36,8 +39,6 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
                    className="form-control form control-lg"
                    placeholder="Enter Name ..."
                    />
-                   <div  className="card">
-                   <div className="card-body"> 
                      <label htmlFor="name">Body:</label>
                      <Editor
         initialEditorState={editorState}

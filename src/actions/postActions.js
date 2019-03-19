@@ -15,7 +15,7 @@ export const deletePost = id => {
 }
 
 
-export const addPosts = post => {
+export const addPost = post => {
     return {
         type: ADD_POST,
         payload: post

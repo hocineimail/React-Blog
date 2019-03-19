@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 import Nav from 'react-bootstrap/Nav'
 
+import Link from 'react-router-dom'
 
 
  class Header extends Component {
@@ -20,7 +21,7 @@ import Nav from 'react-bootstrap/Nav'
      
     </Nav>
     <Nav>
-    <Nav.Link href="/"><i className="fas fa-rss"></i> &nbsp;Blog</Nav.Link>
+    <Nav.Link ><i className="fas fa-rss"></i> &nbsp;Blog</Nav.Link>
       <Nav.Link href="/about"><i className="fas fa-question"></i> &nbsp;About</Nav.Link>
       <Nav.Link href="/contactme"><i className="far fa-envelope-open"></i> &nbsp;Contact Me</Nav.Link>
     </Nav>
